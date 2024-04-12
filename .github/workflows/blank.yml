@@ -54,7 +54,7 @@ jobs:
         with:
           node-version: '14'
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Fetch and merge JSDoc documentation
         run: |
           # Fetch JSDoc comments from other repositories

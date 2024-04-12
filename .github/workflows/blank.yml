@@ -1,0 +1,74 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'https://github.com/R-ohit-B-isht/Test_Docs_1.git'
+      - 'https://github.com/R-ohit-B-isht/Test_Docs_2.git*'
+  push:
+    branches:
+      - main
+    paths:
+      - 'https://github.com/R-ohit-B-isht/Test_Docs_1.git'
+      - 'https://github.com/R-ohit-B-isht/Test_Docs_2.git*'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+  merge-documentation:
+      runs-on: ubuntu-latest
+  
+      steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Fetch all history for accurate attribution
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm ci
+      - name: Fetch and merge JSDoc documentation
+        run: |
+          # Fetch JSDoc comments from other repositories
+          npm install jsdoc-api
+          node script.js
+  
+          # Check if there are any changes in the docs directory
+          if ! git diff --quiet docs/; then
+            # Merge the JSDoc comments into the global documentation repository
+            git checkout -b update-docs
+            git add docs/
+            git commit -m "Update documentation"
+            git push origin update-docs
+            gh pr create --title "Update documentation" --body "This PR updates the global documentation repository with the latest changes from the other repositories."
+          else
+            echo "No changes in the docs directory, skipping update."
+          fi

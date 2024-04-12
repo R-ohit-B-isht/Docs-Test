@@ -21,8 +21,15 @@ async function mergeDocumentation() {
     const repoName = path.basename(repo, '.git');
     const repoDir = path.join(docsDir, repoName);
 
+    console.log(`Cloning ${repo}...`);
     // Clone the repository
-    await exec(`git clone ${repo} ${repoDir}`);
+    try {
+        await exec(`git clone ${repo} ${repoDir}`);
+        console.log(`Cloned ${repo} successfully.`);
+    } catch (error) {
+        console.error(`Failed to clone ${repo}. Error: ${error}`);
+    }
+    
 
   }
 }

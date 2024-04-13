@@ -1,0 +1,42 @@
+{
+    "source": {
+        "include": [".", "package.json", "README.md"],
+        "exclude": ["node_modules", "docs", "test", "coverage", "dist"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "opts": {
+        "encoding": "utf8",
+        "readme": "./README.md",
+        "destination": "./docs",
+        "recurse": true,
+        "verbose": true,
+        "template": "./node_modules/clean-jsdoc-theme",
+        "theme_opts": {
+            "menu": [
+                {
+                    "title": "Backend-Components",
+                    "link": "./Test_Docs_1/docs/rodic-hrms-backend-components/0.0.0/index.html"
+                },
+                {
+                    "title": "Frontend-Components",
+                    "link": "./Test_Docs_2/docs/rodic-hrms-backend-components/0.0.0/index.html"
+                }
+              ],
+            "static_dir": ["./Test_Docs_1", "./Test_Docs_2"],
+            "default_theme": "light" ,
+            "displayModuleHeader": true,
+            "search": true,
+            "sort": false,
+            "homepageTitle": "Clean JSDoc theme",
+            "includeFilesListInHomepage": true,
+            "sections": ["Classes", "Modules", "Externals", "Events", "Namespaces", "Mixins", "Tutorials", "Interfaces", "Global"],
+            "footer": "This is footer" 
+        }
+    },
+    "markdown": {
+        "hardwrap": false,
+        "idInHeadings": true
+    }
+  }
+  

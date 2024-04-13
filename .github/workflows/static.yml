@@ -35,7 +35,7 @@ jobs:
       - name: Build
         run: |
           npm install
-          npm run build
+          npm run docs
       - name: Deploy to GitHub Pages
         id: deploy_pages
         uses: peaceiris/actions-gh-pages@v4

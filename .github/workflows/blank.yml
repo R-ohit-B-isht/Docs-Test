@@ -16,7 +16,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      - uses: shaunco/ssh-agent@git-repo-mapping
+      - uses: webfactory/ssh-agent@v0.4.0
         with:
           ssh-private-key: |
             ${{ secrets.SUBMODULE_1_SSH_PRIVATE_KEY }}

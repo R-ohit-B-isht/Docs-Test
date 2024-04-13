@@ -27,6 +27,6 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
       - name: Update Submodules
         run: |
-          git submodule add https://github.com/R-ohit-B-isht/Test_Docs_1 ./docs/Test_Docs_1
-          git submodule add https://github.com/R-ohit-B-isht/Test_Docs_2 ./docs/Test_Docs_2
+          git submodule add git@github.com:R-ohit-B-isht/Test_Docs_1.git ./docs/Test_Docs_1
+          git submodule add git@github.com:R-ohit-B-isht/Test_Docs_2.git ./docs/Test_Docs_2
           git push

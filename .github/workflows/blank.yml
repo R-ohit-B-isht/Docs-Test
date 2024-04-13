@@ -18,6 +18,14 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
+      - uses: shaunco/ssh-agent@git-repo-mapping
+        with:
+          ssh-private-key: |
+            ${{ secrets.SUBMODULE_1_SSH_PRIVATE_KEY }}
+            ${{ secrets.SUBMODULE_2_SSH_PRIVATE_KEY }}
+          repo-mappings: |
+            https://github.com/R-ohit-B-isht/Test_Docs_1.git
+            https://github.com/R-ohit-B-isht/Test_Docs_2.git
       - uses: actions/checkout@v2
         with:
           submodules: true

@@ -16,7 +16,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           ssh-private-key: |
             ${{ secrets.SUBMODULE_1_SSH_PRIVATE_KEY }}
@@ -24,12 +24,9 @@ jobs:
           repo-mappings: |
             github.com/R-ohit-B-isht/Test_Docs_1
             github.com/R-ohit-B-isht/Test_Docs_2
-          submodules: true
-          fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
       - name: Update Submodules
         run: |
-          git clone github.com/R-ohit-B-isht/Test_Docs_1 ./docs
-          git clone github.com/R-ohit-B-isht/Test_Docs_2 ./docs
-          # git submodule update --remote --merge
+          git submodule add github.com/R-ohit-B-isht/Test_Docs_1 ./docs/Test_Docs_1
+          git submodule add github.com/R-ohit-B-isht/Test_Docs_2 ./docs/Test_Docs_2
           git push

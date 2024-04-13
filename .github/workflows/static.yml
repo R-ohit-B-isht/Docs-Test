@@ -27,7 +27,7 @@ jobs:
     environment:
       name: github-pages
       # Construct GitHub Pages URL
-      url: https://${{ github.repository_owner }}.github.io/${{ github.repository_name }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,5 +40,5 @@ jobs:
           # Upload entire repository
           path: './docs/docs-test/1.0.0/'
       - name: Deploy to GitHub Pages
-        id: deployment
+        id: deployment_test_doc
         uses: actions/deploy-pages@v4

@@ -1,7 +1,7 @@
 {
     "source": {
         "include": [".", "package.json", "README.md"],
-        "exclude": ["node_modules", "docs", "test", "coverage", "dist"],
+        "exclude": ["node_modules", "docs", "test", "coverage", "dist","Rodic-HRMS-Backend-Components"],
         "includePattern": ".js$",
         "excludePattern": "(node_modules/|docs)"
     },
@@ -17,15 +17,11 @@
             "menu": [
                 {
                     "title": "Backend-Components",
-                    "link": "./Test_Docs_1/docs/rodic-hrms-backend-components/0.0.0/index.html"
-                },
-                {
-                    "title": "Frontend-Components",
-                    "link": "./Test_Docs_2/docs/rodic-hrms-backend-components/0.0.0/index.html"
+                    "link": "./Rodic-HRMS-Backend-Components/docs/rodic-hrms-backend-components/0.0.0/index.html"
                 }
               ],
-            "static_dir": ["./images","./Test_Docs_1", "./Test_Docs_2"],
-            "default_theme": "light" ,
+            "static_dir": ["./images","./Rodic-HRMS-Backend-Components"],
+            "default_theme": "dark" ,
             "displayModuleHeader": true,
             "search": true,
             "sort": false,

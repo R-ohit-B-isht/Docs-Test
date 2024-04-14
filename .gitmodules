@@ -1,0 +1,3 @@
+[submodule "Rodic-HRMS-Backend-Components"]
+	path = Rodic-HRMS-Backend-Components
+	url = https://github.com/SecretStencil/Rodic-HRMS-Backend-Components.git

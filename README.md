@@ -9,7 +9,7 @@ This repository serves as the central hub for accessing all the other projects a
 
     | Component Name           | Component Documentation                                               |
     |-------------------------|-----------------------------------------------------------------------|
-    | Backend Components            | [Docs](https://github.com/username/component-a1-docs) |
+    | Backend Components            | [Docs](./Rodic-HRMS-Backend-Components/docs/rodic-hrms-backend-components/0.0.0/index.html) |
 
 
 

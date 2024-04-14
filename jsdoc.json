@@ -14,12 +14,6 @@
         "verbose": true,
         "template": "./node_modules/clean-jsdoc-theme",
         "theme_opts": {
-            "menu": [
-                {
-                    "title": "Backend-Components",
-                    "link": "./Rodic-HRMS-Backend-Components/docs/rodic-hrms-backend-components/0.0.0/index.html"
-                }
-              ],
             "static_dir": ["./images","./Rodic-HRMS-Backend-Components"],
             "default_theme": "dark" ,
             "displayModuleHeader": true,

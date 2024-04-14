@@ -3,7 +3,7 @@
 *A mostly reasonable approach to JavaScript*
 
 Other Style Guides
-  - [JS-The-Right-Way] (http://jstherightway.org/)
+  - [JS-The-Right-Way] (https://jstherightway.org)
   - [ES5 (Deprecated)](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
   - [CSS-in-JavaScript](css-in-javascript/)
   - [CSS & Sass](https://github.com/airbnb/css)

@@ -16,6 +16,18 @@
         "theme_opts": {
             "static_dir": ["./images","./Rodic-HRMS-Backend-Components"],
             "default_theme": "dark" ,
+            "menu": [
+                {
+                    "title": "Github",
+                    "id": "github",
+                    "link": "https://github.com/SecretStencil"
+                },
+                {
+                    "title": "Notion",
+                    "id": "notion",
+                    "link": "https://www.notion.so"
+                }
+            ],
             "displayModuleHeader": true,
             "search": true,
             "sort": false,

@@ -1,20 +1,10 @@
 {
-  "name": "docs-test",
+  "name": "debound-docs",
   "version": "1.0.0",
   "author": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/R-ohit-B-isht/Docs-Test.git"
-  },
-  "main": "index.js",
-  "bugs": {
-    "url": "https://github.com/R-ohit-B-isht/Docs-Test/issues"
-  },
-  "description": "",
-  "homepage": "https://github.com/R-ohit-B-isht/Docs-Test#readme",
+  "description": "This repository serves as the central hub for accessing all the other projects and component documentations.",
   "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "jsdoc -c jsdoc.json"
   },
   "devDependencies": {

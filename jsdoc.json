@@ -19,7 +19,7 @@
             "displayModuleHeader": true,
             "search": true,
             "sort": false,
-            "homepageTitle": "Clean JSDoc theme",
+            "homepageTitle": "Debound Docs",
             "includeFilesListInHomepage": true,
             "sections": ["Classes", "Modules", "Externals", "Events", "Namespaces", "Mixins", "Tutorials", "Interfaces", "Global"]
         }

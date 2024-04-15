@@ -1,5 +1,5 @@
 
-# Debound
+# Debound Docs
 
 This repository serves as the central hub for accessing all the other projects and component documentations.
 

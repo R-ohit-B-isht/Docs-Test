@@ -13,7 +13,7 @@ This repository serves as the central hub for accessing all the other projects a
 
 
 
-## Guidelines List
+## Coding Guidelines
 
 1. [API Guidelines](./tutorial-API_Guidelines.html)
 2. [API Security Guidelines](./tutorial-API_Security_Guidelines.html)

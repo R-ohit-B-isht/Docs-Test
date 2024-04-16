@@ -15,8 +15,18 @@ jobs:
         shell: bash
 
     steps:
-    # Checkout the repository to the GitHub Actions runner
     - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Build
+        run: |
+          npm install
+          npm run docs
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout2
       uses: actions/checkout@v2
       with:
         token: ${{ secrets.GH_TOKEN }}
